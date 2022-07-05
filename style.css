@@ -2,16 +2,22 @@
     padding: 0;
     margin: 0;
 }
+html, body, #root {
+    width: 100%;
+    height: 100%;
+}
 
-body {
+#root {
     display: grid;
+    grid-template-rows: max-content auto;
+    gap: 40px;
 }
 
 header {
-    height: 60px;
-    display: flex;
-    background-color: #245D85;
-    margin-bottom: 80px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: auto max-content max-content;
+    background-color: black;
 }
 
 .title {
@@ -19,17 +25,12 @@ header {
     padding: 10px;
 }
 
-.headerButton {
-    margin-left: 10px;
+.actions, .search {
     padding: 10px;
 }
 
 button {
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #3785A6;
-    color: white;
-    border-style: unset;
+    padding: 10px
 }
 
 .goods-list {
@@ -39,12 +40,16 @@ button {
 }
 
 .goods-item {
-    width: 210px;
-    height: 400px;
-    padding: 12px;
+    width: 200px;
+    height: 300px;
+    padding: 10px;
     box-sizing: border-box;
-    outline: 2px solid #245D85;
+    outline: 1px solid black;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
+}
+
+.goods-search {
+    height: 36px
 }
